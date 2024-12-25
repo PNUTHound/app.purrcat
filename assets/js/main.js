@@ -15,16 +15,16 @@ if(coins == null){
 }
 
 if(total == null){
-    localStorage.setItem('total' , '500')
-    body.querySelector('#total').textContent = '/500';
+    localStorage.setItem('total' , '24')
+    body.querySelector('#total').textContent = '/24';
 }else {
     body.querySelector('#total').textContent = `/${total}`;
 }
 
 
 if(power == null){
-    localStorage.setItem('power' , '500');
-    body.querySelector('#power').textContent = '500';
+    localStorage.setItem('power' , '24');
+    body.querySelector('#power').textContent = '24';
 }else{
     body.querySelector('#power').textContent = power;
 }
@@ -82,4 +82,4 @@ setInterval(()=> {
         body.querySelector('#power').textContent = `${Number(power) + Number(count)}`;
         body.querySelector('.progress').style.width = `${(100 * power) / total}%`;
     }
-}, 1000);
+},60 * 60 * 1000);
